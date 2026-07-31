@@ -1,5 +1,5 @@
 const API_BASE =
-  "https://dnd-item-prop.ablx799.workers.dev/";
+  "https://dnd-worker.ablx799.workers.dev/";
 
 const out = document.getElementById("out");
 
@@ -8,7 +8,7 @@ document.getElementById("rollBtn").addEventListener("click", roll);
 async function roll() {
   out.innerHTML = "Rolling...";
 
-  const url = new URL(API_BASE);
+  const url = new URL(API_BASE + "artifact");
 
   url.searchParams.set("minorBeneficial", getVal("minorBen"));
   url.searchParams.set("majorBeneficial", getVal("majorBen"));
